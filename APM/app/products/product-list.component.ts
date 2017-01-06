@@ -15,6 +15,7 @@ export class ProductListComponent implements OnInit {
     imgMargine: number=2;
     showImage: boolean=false;
     listfilter: string="cart";
+    errorMsg:string;
 
     products: Iproduct[] ;
     
@@ -25,7 +26,7 @@ export class ProductListComponent implements OnInit {
     }
 
     ngOnInit():void{
-        this.products=this._productService.getProduct();
+        this._productService.getProduct().subscribe(p=>this.products=p,error=>this.errorMsg=<any>error);
     }
 
     onratingClicked( message:string):void {
