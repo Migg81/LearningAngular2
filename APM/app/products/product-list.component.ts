@@ -4,7 +4,6 @@ import { OnInit } from '@angular/core';
 import { ProductService} from './product.service';
 
 @Component({
-    selector:'pm-products',
     moduleId:module.id,
     templateUrl:'products-list.component.html',
     styleUrls:["product-list.component.css"]
