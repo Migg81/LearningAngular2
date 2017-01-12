@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {  ProductService } from './products/product.service';
+
 import { RouterModule, Routes } from '@angular/router';
 
 @Component({
@@ -20,7 +20,6 @@ import { RouterModule, Routes } from '@angular/router';
         </div>
      </div>
     `,
-    providers:[ProductService],
 })
 export class AppComponent { 
     pageTitle: string='Product Manegment'; 
